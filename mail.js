@@ -12,7 +12,7 @@ const https = false;
 // Enable CORS for all routes
 const corsOrigins = process.env.CORS_ORIGINS
   ? process.env.CORS_ORIGINS.split(",")
-  : ["http://localhost:5173"];
+  : [`http://${host}:${port}`];
 
 app.use(
   cors({
